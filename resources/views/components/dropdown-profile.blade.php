@@ -15,14 +15,14 @@
                 <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z" />
             </svg>
         </div> --}}
-        @if (Auth::user()->profile_photo_path)
+        {{-- @if (Auth::user()->profile_photo_path)
             <img src="{{ route('profile-photo.file', ['filename' => basename(Auth::user()->profile_photo_path)]) }}" 
                     alt="{{ Auth::user()->name }}" 
                     width="32" height="32"
                     class="w-8 h-8 rounded-full">
-        @else
-            <img class="w-8 h-8 rounded-full" src="{{ Auth::user()->profile_photo_url }}" width="32" height="32" alt="Tae" />
-        @endif
+        @else --}}
+            <img class="w-8 h-8 rounded-full" src="images/blank.png" width="32" height="32" alt="Tae" />
+        {{-- @endif --}}
        
     </button>
     <div
@@ -39,8 +39,8 @@
         x-cloak
     >
         <div class="pt-0.5 pb-2 px-3 mb-1 border-b border-slate-200 dark:border-slate-700">
-            <div class="font-medium text-slate-800 dark:text-slate-100">{{ Auth::user()->name }}</div>
-            <div class="text-xs text-slate-500 dark:text-slate-400 italic">{{ Auth::user()->user_role == 'sa' || Auth::user()->user_role == 'admin' ? 'Administrator' : 'Homeowner' }}</div>
+            <div class="font-medium text-slate-800 dark:text-slate-100">Juan Dela Cruz</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400 italic">Administrator</div>
         </div>
         <ul>
             <li>

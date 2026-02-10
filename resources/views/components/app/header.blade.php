@@ -36,10 +36,10 @@
 
                 <!-- Notifications button -->
                 {{-- <x-dropdown-notifications align="right" /> --}}
-                @livewire('notification.notifications-dropdown')
+                {{-- @livewire('notification.notifications-dropdown') --}}
 
                 <!-- Dark mode toggle -->
-                <x-theme-toggle />
+                {{-- <x-theme-toggle /> --}}
 
                 <!-- Divider -->
                 <hr class="w-px h-6 bg-slate-200 dark:bg-slate-700 border-none" />

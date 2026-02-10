@@ -5,18 +5,31 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use App\Livewire\Admin\Dashboard;
+use App\Livewire\Admin\BudgetManagement;
+use App\Livewire\Admin\ProcurementPlanningManagement;
+use App\Livewire\Admin\ProcurementManagement;
+use App\Livewire\Admin\ContractManagement;
 
 
-Route::redirect('/', '/login');
-Route::get('/register', function () {return view('registeraccount'); })->name('register');
+// Route::redirect('/', '/login');
+// Route::get('/register', function () {return view('registeraccount'); })->name('register');
 
+Route::get('/', function () {
+    return redirect('/dashboard');
+});
 
+Route::get('/dashboard', Dashboard::class)->name('dashboard');
+Route::get('/budgets', BudgetManagement::class)->name('budgets');
+Route::get('/procurement-planning', ProcurementPlanningManagement::class)->name('procurement-planning');
+Route::get('/procurements', ProcurementManagement::class)->name('procurements');
+Route::get('/contracts', ContractManagement::class)->name('contracts');
 
 
 /* Admin account role ------------------------------------------------------------------------------*/
-Route::middleware(['auth', 'checkrole:sa,admin'])->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-});
+// Route::middleware(['auth', 'checkrole:sa,admin'])->group(function () {
+//     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+// });
 
 
 

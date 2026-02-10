@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="icon" href="/images/beahoa-logo.png" type="image/x-icon">
+    <link rel="icon" href="/images/logo.png" type="image/x-icon">
 
-    <title>BEAHOA</title>
+    <title>NDC</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -112,7 +112,7 @@
 
                     <div class="flex relative z-10 mb-4 sm:hidden">
                         <div class="flex items-center justify-center h-16 px-4 sm:px-6 lg:px-8">
-                            <img src="images/beahoa-logo-white.png" alt="logo" style="width: 200px;">
+                            <img src="images/logo-white.png" alt="logo" style="width: 200px;">
                         </div>
                     </div>
 
@@ -127,8 +127,8 @@
             <!-- Right Content -->
             <div class="hidden md:block md:w-1/2 overflow-hidden right-side-content" aria-hidden="true">
                 <div class="flex items-center justify-center w-full h-full login-logo animate-slide-in-right-delay">
-                    <img class="w-1/2 h-1/2 object-contain" src="{{ asset('images/beahoa.jpeg') }}" width="760"
-                        height="1024" alt="BEAHOA Logo"/>
+                    <img class="w-1/2 h-1/2 object-contain" src="{{ asset('images/logo.png') }}" width="760"
+                        height="1024" alt="NDC Logo"/>
                 </div>
             </div>
 
